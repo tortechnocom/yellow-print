@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:index, :show]
+  get 'third', to: :show, controller: 'third'
 
   root to: redirect('/users/sign_in')
 end
